@@ -1,0 +1,43 @@
+
+
+<div class="row">
+  	<div class="col-md-3" style="background-image: url(https://images.unsplash.com/photo-1566458226966-5d1efe19e4b7?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8OHx8a2l0dGVufGVufDB8fDB8&auto=format&fit=crop&w=500&q=60"></div>
+  	<div class="col-md-1"></div>
+  	<div class="col-md-5">
+  		<br>
+  		<br>
+  		<br>
+    	<div class="card">
+  			<div class="card-body">
+     			<h1 class="font-weight-bold">Récapitulatif de mes infos personnels :</h1>
+     			
+				<ul class="list-group">
+  					<li class="list-group-item"><p>Prénom</b> : <%= @user.first_name %></p></li>
+  					<br>
+    				<li class="list-group-item"><p>Nom</b> : <%= @user.last_name %></p></li>
+    				<br>
+					<li class="list-group-item"><p>E-mail</b> : <%= @user.email %></p></li>
+				</ul>
+				<hr>
+	    		<p>Pour l'instant, j'ai passé <%= @user.orders.all.count %> commande(s) sur le site.</p>
+	    		<hr>
+					<div>
+					<p>Je souhaite modifier mon adresse e-mail ou mon mot de passe ?</p>
+	   			<a href="/users/edit" class="btn btn-primary" >C'est par ici !</a>
+					</div>
+						<div>
+					<p>Voir mes commandes ?</p>
+					<%= link_to "Voir mes commandes", orders_index_path, class: "btn btn-primary"%>
+	   			
+					</div>
+  			</div>
+		</div>
+
+		<br>
+		<br>
+		<br>
+	</div>
+</div>
+
+
+
